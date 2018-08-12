@@ -1,6 +1,6 @@
 {
     "name": "select-properties",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Specify which properties to include or exclude in an object or an array of objects",
     "main": "index.js",
     "engines": {

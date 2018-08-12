@@ -5,7 +5,6 @@ Specify which properties to include or exclude in an object or an array of objec
 [![npm](https://img.shields.io/npm/v/select-properties.svg)](https://www.npmjs.com/package/select-properties)
 [![Travis (.org)](https://img.shields.io/travis/Nicklason/node-select-properties.svg)](https://travis-ci.org/Nicklason/node-select-properties)
 [![Coveralls github](https://img.shields.io/coveralls/github/Nicklason/node-select-properties.svg)](https://coveralls.io/github/Nicklason/node-select-properties)
-[![node](https://img.shields.io/node/v/select-properties.svg)](https://www.npmjs.com/package/select-properties)
 
 [![npm](https://nodei.co/npm/select-properties.png)](https://nodei.co/npm/select-properties/)
 
@@ -14,7 +13,7 @@ I made this module to help me better use [cachegoose](https://www.npmjs.com/pack
 
 This module works the same way as mongoose's [select](http://mongoosejs.com/docs/queries.html) function, only difference is that you give it the result, and then give it the fields you want selected.
 
-*This is just the reason to why I've made the module, you can use it to solve your own problems!*
+*This is the reason to why I've made this module, but you can use it to solve your own problems!*
 
 It can be used 
 
