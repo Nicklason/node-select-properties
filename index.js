@@ -83,7 +83,7 @@ function select (target, fields) {
     for (i = 0, len = check.length; i < len; ++i) {
         let field = check[i];
         if (!include) {
-            delete result[field]
+            delete result[field];
         } else if (target.hasOwnProperty(field)) {
             result[field] = target[field];
         }
