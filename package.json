@@ -1,8 +1,11 @@
 {
     "name": "select-properties",
     "version": "1.0.0",
-    "description": "Specify which properties to include or exclude of an object or an array of objects",
+    "description": "Specify which properties to include or exclude in an object or an array of objects",
     "main": "index.js",
+    "engines": {
+        "node": ">=6.0.0"
+    },
     "scripts": {
         "lint": "eslint ./",
         "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",
