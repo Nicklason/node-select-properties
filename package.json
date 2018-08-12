@@ -1,0 +1,38 @@
+{
+    "name": "select-properties",
+    "version": "1.0.0",
+    "description": "Specify which properties to include or exclude of an object or an array of objects",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint ./",
+        "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",
+        "report": "npm test && istanbul report",
+        "coveralls": "cat ./coverage/lcov.info | coveralls"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Nicklason/node-select-properties.git"
+    },
+    "author": "Nicklas Marc Pedersen",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Nicklason/node-select-properties/issues"
+    },
+    "homepage": "https://github.com/Nicklason/node-select-properties#readme",
+    "devDependencies": {
+        "assert": "^1.4.1",
+        "coveralls": "^3.0.2",
+        "eslint": "^5.3.0",
+        "eslint-config-google": "^0.9.1",
+        "istanbul": "^0.4.5",
+        "mocha": "^5.2.0",
+        "nodemon": "^1.18.3"
+    },
+    "keywords": [
+        "select",
+        "include",
+        "exclude",
+        "properties",
+        "fields"
+    ]
+}
