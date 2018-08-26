@@ -1,24 +1,23 @@
 {
-    "extends": ["eslint:recommended", "google"],
-    "env": {
+  "extends": ["eslint:recommended", "google"],
+  "env": {
     "node": true
-    },
-    "parserOptions": {
-        "ecmaVersion": 6
-    },
-    "rules": {
-        "comma-dangle": [2, "never"],
-        "max-len": [2, 100, {
-            "ignoreComments": true,
-            "ignoreStrings": true,
-            "ignoreTemplateLiterals": true
-        }],
-        "linebreak-style": 0,
-        "keyword-spacing": 2,
-        "indent": [2, 4, { "SwitchCase": 1 }],
-        "object-curly-spacing": [2, "always"],
-        "space-before-function-paren": ["error", "always"],
-        "quote-props": ["error", "as-needed"],
-        "no-console": [2]
-    }
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "comma-dangle": [2, "never"],
+    "indent": [2, 4, { "SwitchCase": 1 }],
+    "keyword-spacing": 2,
+    "linebreak-style": 0,
+    "max-len": [2, 100, {
+      "ignoreComments": true,
+      "ignoreStrings": true
+    }],
+    "no-console": [2],
+    "object-curly-spacing": [2, "always"],
+    "quote-props": ["error", "as-needed"],
+    "space-before-function-paren": ["error", "always"]
+  }
 }

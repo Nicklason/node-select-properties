@@ -9,7 +9,7 @@ Specify which properties to include or exclude in an object or an array of objec
 [![npm](https://nodei.co/npm/select-properties.png)](https://nodei.co/npm/select-properties/)
 
 # Introduction
-I made this module to help me better use [cachegoose](https://www.npmjs.com/package/cachegoose). I wanted to be able to cache all properties from queries, but only select specific fields. This is because I have two applications using the same [mongodb](https://www.mongodb.com/) and [redis](https://redis.io/) database, but they don't need the same data.
+I made this module to help me use [cachegoose](https://www.npmjs.com/package/cachegoose). I wanted to be able to cache all properties from queries, but only select specific fields. This is because I have two applications using the same [mongodb](https://www.mongodb.com/) and [redis](https://redis.io/) database, but they don't need the same data.
 
 This module works the same way as mongoose's [select](http://mongoosejs.com/docs/queries.html) function, only difference is that you give it the result, and then give it the fields you want selected.
 
