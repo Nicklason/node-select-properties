@@ -32,11 +32,63 @@ const result = selectProperties(target, select);
 // The result will be { bar: '' }
 ```
 
+Select nested properties using dot notation.
+
+```js
+const target = {
+    some: {
+        nested: {
+            value: ''
+        },
+        other: {
+            nested: {
+                value: ''
+            }
+        }
+    }
+};
+
+const select = '-some.nested';
+
+const result = selectProperties(target, select);
+// The result will be { some: { other: { nested: { value: '' } } } }
+```
+
+---
+**NOTE**
+
+Both nested paths, and properties, that match the selected field will be targeted.
+
+See example below.
+
+---
+
+```js
+const target = {
+    some: {
+        nested: {
+            value: ''
+        },
+        other: {
+            nested: {
+                value: ''
+            }
+        }
+    },
+    'some.nested': {
+        value: ''
+    }
+};
+
+const select = '-some.nested';
+
+const result = selectProperties(target, select);
+// The result will be { some: { other: { nested: { value: '' } } } }
+```
+
 Select the properties of multiple objects.
 
 ```js
-const selectProperties = require('select-properties');
-
 const target = [{ foo: '', bar: '' }, { foo: '', bar: '' }];
 // Array of objects to select the fields of
 
@@ -56,8 +108,6 @@ const select = '-foo';
 Select specific properties.
 
 ```js
-const selectProperties = require('select-properties');
-
 const target = [{ foo: '', bar: '' }, { foo: '', bar: '' }];
 // Array of objects to select the fields of
 
