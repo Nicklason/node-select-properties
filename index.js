@@ -1,5 +1,7 @@
 'use strict';
 
+const dot = require('dot-object');
+
 // This module is inspired by mongoose's select query
 
 /**
@@ -83,9 +85,18 @@ function select (target, fields) {
     for (i = 0, len = check.length; i < len; ++i) {
         let field = check[i];
         if (!include) {
-            delete result[field];
-        } else if (target.hasOwnProperty(field)) {
-            result[field] = target[field];
+            if (target.hasOwnProperty(field)) {
+                delete target[field];
+            }
+            dot.remove(field, result);
+        } else {
+            if (target.hasOwnProperty(field)) {
+                result[field] = target[field];
+            }
+            const val = dot.pick(field, target);
+            if (val) {
+                dot.str(field, val, result);
+            }
         }
     }
 

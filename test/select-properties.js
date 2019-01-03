@@ -60,6 +60,36 @@ describe('Include', function () {
         const fields = 'foo bar';
         assert.deepStrictEqual(selectProperties(target, fields), target);
     });
+
+    it('should work with nested properties', function () {
+        const target = {
+            some: {
+                nested: {
+                    value: ''
+                },
+                other: {
+                    nested: {
+                        value: ''
+                    }
+                }
+            },
+            'some.nested': {
+                value: ''
+            }
+        };
+        const fields = 'some.nested';
+
+        assert.deepStrictEqual(selectProperties(target, fields), {
+            some: {
+                nested: {
+                    value: ''
+                }
+            },
+            'some.nested': {
+                value: ''
+            }
+        });
+    });
 });
 
 describe('Exclude', function () {
@@ -84,5 +114,34 @@ describe('Exclude', function () {
         const target = [{ foo: '' }];
         const fields = '-foo';
         assert.deepStrictEqual(selectProperties(target, fields), [{}]);
+    });
+
+    it('should work with nested properties', function () {
+        const target = {
+            some: {
+                nested: {
+                    value: ''
+                },
+                other: {
+                    nested: {
+                        value: ''
+                    }
+                }
+            },
+            'some.nested': {
+                value: ''
+            }
+        };
+        const fields = '-some.nested';
+
+        assert.deepStrictEqual(selectProperties(target, fields), {
+            some: {
+                other: {
+                    nested: {
+                        value: ''
+                    }
+                }
+            }
+        });
     });
 });
